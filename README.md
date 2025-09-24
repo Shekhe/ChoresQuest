@@ -54,4 +54,4 @@ choresappv1.6/
 
 ## License
 This project is for educational and personal use.  
-(You can specify MIT, GPL, or another license here.)
+

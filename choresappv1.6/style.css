@@ -1,0 +1,380 @@
+body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        /* Kid-friendly title styling */
+        .landing-title {
+            font-family: 'Fredoka One', cursive !important; 
+            @apply text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-pink-500 to-red-500;
+            line-height: 1.2; 
+            font-weight: normal; 
+        }
+
+        .btn { /* Base button styling */
+            padding: 10px 15px !important; /* Updated padding as per request */
+            @apply rounded-lg font-semibold shadow-md transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-opacity-50 flex items-center justify-center;
+        }
+        .btn-2 {
+            padding: 8px 15px !important;
+        }
+        .btn-landing { 
+             padding: 15px !important; /* Padding as per request */
+        }
+        .btn i.icon-only { 
+            margin-right: 0; 
+        }
+        .btn i:not(.icon-only) { 
+             @apply sm:mr-2;
+        }
+        
+        /* Landing Page Buttons - Specific styling */
+        #parentBtn.btn-parent { 
+            background-color: #0ea5e9 !important; /* Explicit #0ea5e9 */
+            color: white !important;
+        }
+        #parentBtn.btn-parent:hover {
+            background-color: #0284c7 !important; /* Reverted to sky-600 equivalent */
+        }
+         #parentBtn.btn-parent:focus {
+            @apply ring-sky-400; /* sky-400 */
+        }
+
+        #kidsBtn.btn-kid { 
+            background-color: #84cc16 !important; /* Tailwind lime-500 */
+            color: white !important;
+        }
+        #kidsBtn.btn-kid:hover {
+            background-color: #65a30d !important; /* Tailwind lime-600 */
+        }
+        #kidsBtn.btn-kid:focus {
+             @apply ring-lime-400;
+        }
+
+        /* General App Buttons */
+        .btn-primary { 
+            background-color: #0ea5e9 !important; /* Explicit #0ea5e9 */
+            color: white !important; 
+            @apply focus:ring-sky-400; /* sky-400 */
+        }
+        .btn-primary:hover {
+            background-color: #0284c7 !important; /* Reverted to sky-600 equivalent */
+        }
+
+        .btn-secondary { 
+             background-color: #84cc16 !important; /* lime-500 */
+             color: white !important;
+             @apply focus:ring-lime-400; 
+        }
+        .btn-secondary:hover {
+             background-color: #65a30d !important; /* lime-600 */
+        }
+        
+        #kidRewardsModal .claim-reward-btn:disabled {
+            background-color: #d1d5db !important; /* bg-gray-300 */
+            color: #6b7280 !important; /* text-gray-500 */
+            @apply cursor-not-allowed;
+        }
+        #kidRewardsModal .claim-reward-btn:disabled:hover {
+             background-color: #d1d5db !important; 
+        }
+
+        .btn-neutral {
+            
+            background-color: #d1d5db !important; /* bg-gray-300 */
+            @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-400;
+        }
+        .btn-sm { 
+            padding: 0.5rem 0.75rem !important; 
+            @apply text-sm; 
+        }
+        .card {
+            @apply bg-white p-6 rounded-xl shadow-lg;
+        }
+        .input-field { 
+            padding: 3px !important; 
+            width: 100% !important; 
+            @apply border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent outline-none;
+        }
+        .input-field:focus { 
+            --tw-ring-color: #0ea5e9; 
+        }
+        
+        form label {
+            @apply w-full block; 
+        }
+        .label-w-50 {
+            width: 50% !important;
+        }
+        .modal { 
+            @apply fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 z-50;
+        }
+        .modal-content { 
+            margin-top:20px; 
+            @apply bg-white p-6 rounded-lg shadow-2xl w-full transform transition-all overflow-y-auto max-h-[90vh];
+        }
+        #kidRewardsModal .modal-content { 
+             @apply p-6 md:p-8; 
+        }
+
+        /* Highlight colors */
+        .highlight-red { @apply text-red-600 font-semibold; }
+        .highlight-red-bg { @apply bg-red-50 border-red-500; }
+        .highlight-green { @apply text-lime-600 font-semibold; }
+        .highlight-green-bg { @apply bg-lime-50 border-lime-500; }
+        .highlight-purple { @apply text-purple-600 font-semibold; } /* NEW for Family Task indicator */
+
+
+        .nav-link {
+            @apply block px-4 py-2 text-gray-700 rounded-md transition-colors;
+            padding:3px;
+        }
+        .nav-link:hover { 
+            background-color: #e0f2fe; /* sky-100 */
+            padding:3px;
+            color: #0ea5e9; /* Explicit #0ea5e9 */
+        }
+        .active-nav-link { 
+            background-color: #0ea5e9 !important; /* Explicit #0ea5e9 */
+            padding:3px;
+            color: white !important;
+        }
+        .active-nav-link:hover {
+             background-color: #0284c7 !important; /* Reverted to sky-600 equivalent */
+             padding:3px;
+        }
+        .page { display: none; }
+        .page.active { display: block; }
+
+        .filter-task-btn.active { 
+            background-color: #0ea5e9 !important; /* Explicit #0ea5e9 */
+            color: white !important;
+        }
+        .form-checkbox { 
+            color: #0ea5e9; /* Explicit #0ea5e9 */
+        }
+        .notification-item {
+            @apply p-3 border-b border-gray-200 hover:bg-gray-100 cursor-pointer;
+        }
+        .notification-item.is-read {
+            @apply bg-gray-50 opacity-70;
+        }
+
+        /* Custom utility classes for #0ea5e9 theme color */
+        .text-app-blue { color: #0ea5e9; }
+        .bg-app-blue { background-color: #0ea5e9; }
+        .border-app-blue { border-color: #0ea5e9; }
+        .bg-app-blue-light { background-color: #f0f9ff; } /* Equivalent to Tailwind's sky-50 */
+        .text-app-blue-darkest { color: #0369a1; } /* Equivalent to Tailwind's sky-700, kept for distinct darker hovers */
+
+        /* Pagination styles */
+        .pagination-page-btn {
+            @apply w-8 h-8 mx-1 rounded-full flex items-center justify-center text-sm font-medium transition-colors;
+            background-color: #0ea5e9; /* Primary blue background */
+            color: white;             /* White text */
+            border: 1px solid #0ea5e9;    /* Blue border, matching background */
+            line-height: 1; 
+            padding: 2px 10px !important; /* Updated padding as per request - will make buttons less circular */
+        }
+        .pagination-page-btn:hover {
+            background-color: #0284c7; /* Darker blue on hover, matches btn-primary:hover */
+            border-color: #0284c7;    /* Match hover background */
+            color: white;             /* Ensure text remains white */
+        }
+        .pagination-page-btn.active {
+            background-color: white;   /* White background for active page */
+            color: #0ea5e9;           /* Blue text for active page */
+            border-color: #0ea5e9;    /* Blue border for active page */
+        }
+        .pagination-page-btn.active:hover { /* Active page button should not change on hover */
+            background-color: white;
+            color: #0ea5e9;
+            border-color: #0ea5e9;
+        }
+        /* Prev/Next buttons will use .btn and .btn-neutral directly, mx-1 added in JS */
+
+.week-day-selector {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+.week-day-selector input[type="checkbox"] {
+    display: none;
+}
+.week-day-selector input[type="checkbox"] + label {
+    display: inline-block;
+    border-radius: 6px;
+    background: #e5e7eb; /* gray-200 */
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+.week-day-selector input[type="checkbox"]:checked + label {
+    background-color: #0ea5e9; /* app-blue */
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.week-day-selector input[type="checkbox"] + label:hover {
+    background-color: #d1d5db; /* gray-300 */
+}
+.week-day-selector input[type="checkbox"]:checked + label:hover {
+    background-color: #0284c7; /* darker app-blue */
+}
+
+/* Add this to the end of your style.css file */
+
+.child-selector-container {
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #d1d5db; /* gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 0.5rem;
+    background-color: white;
+}
+
+.child-selector-container label {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 0.375rem; /* rounded-md */
+    transition: background-color 0.2s ease-in-out;
+}
+
+.child-selector-container label:hover {
+    background-color: #f3f4f6; /* gray-100 */
+}
+
+.child-selector-container input[type="checkbox"] {
+    margin-right: 0.75rem;
+    height: 1.25rem; /* h-5 */
+    width: 1.25rem; /* w-5 */
+    color: #0ea5e9; /* app-blue */
+    border-radius: 0.25rem; /* rounded */
+}
+
+.child-selector-container img {
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    border-radius: 9999px; /* rounded-full */
+    margin-right: 0.75rem;
+    object-fit: cover;
+}
+
+/* Icon Library Modal */
+#iconLibraryGrid img {
+    cursor: pointer;
+    border-radius: 0.5rem; /* rounded-lg */
+    border: 3px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#iconLibraryGrid img:hover {
+    transform: scale(1.05);
+    border-color: #fde047; /* yellow-300 */
+}
+
+#iconLibraryGrid img.selected {
+    border-color: #0ea5e9; /* app-blue */
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+    transform: scale(1.1);
+}
+
+#iosInstallInstructions img {
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.25rem; /* Adjust size as needed */
+    width: 1.25rem;  /* Adjust size as needed */
+    margin: 0 0.25rem;
+}
+
+/* NEW: Styles for small input field */
+.input-field-sm {
+    padding: 0.25rem 0.5rem !important; /* Smaller padding */
+    font-size: 0.875rem !important; /* text-sm */
+    height: 32px; /* Fixed height for consistency with buttons */
+    line-height: 1.25;
+    @apply border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent outline-none;
+}
+.input-field-sm:focus {
+    --tw-ring-color: #0ea5e9;
+}
+
+/* --- MODIFIED CSS FOR TASK CARD LAYOUT ON SMALL SCREENS --- */
+#childDashboard .card {
+    display: flex; 
+    align-items: center; 
+    padding: 0.75rem; 
+}
+
+#childDashboard .card .flex-grow {
+    flex-grow: 1; 
+    min-width: 0; 
+    /* Removed margin-right to allow content more space if needed */
+}
+
+#childDashboard .card .flex-shrink-0 {
+    flex-shrink: 0; 
+    margin-left: auto; 
+}
+
+/* Adjust the image to prevent it from taking too much space on small screens */
+#childDashboard .card img {
+    flex-shrink: 0; 
+    width: 3rem; 
+    height: 3rem; 
+    margin-right: 0.75rem; 
+}
+
+/* Ensure action button is always visible */
+#childDashboard .card .mark-task-done {
+    flex-shrink: 0; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+}
+
+/* Revert title truncation and move family tag to new line */
+#childDashboard .card h4 {
+    white-space: normal; /* Allow text to wrap */
+    overflow: visible; /* Prevent truncation */
+    text-overflow: clip; /* Prevent ellipsis */
+    max-width: none; /* Allow it to take full width of its container */
+    display: block; /* Ensure it takes its own line within flex item */
+    line-height: 1.3; /* Adjust line height for readability if it wraps */
+}
+
+#childDashboard .card h4 .highlight-purple {
+    display: block; /* Force to new line */
+    font-size: 0.75rem; 
+    margin-left: 0; /* No left margin when on new line */
+    margin-top: 0.25rem; /* Small margin from the title above */
+}
+
+/* NEW: Styles for the custom toggle switch */
+.toggle-reward-active + .block {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.toggle-reward-active + .block + .dot {
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.toggle-reward-active:checked + .block {
+    background-color: #84cc16; /* lime-500 */
+}
+
+.toggle-reward-active:checked + .block + .dot {
+    transform: translateX(100%);
+    background-color: #d1d5db; /* gray-300 for the dot when checked */
+}
+
+.toggle-reward-active:not(:checked) + .block {
+    background-color: #d1d5db; /* gray-300 */
+}
+
+.toggle-reward-active:not(:checked) + .block + .dot {
+    transform: translateX(0);
+    background-color: #84cc16; /* lime-500 for the dot when unchecked */
+}

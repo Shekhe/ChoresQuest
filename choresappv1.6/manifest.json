@@ -1,0 +1,21 @@
+{
+  "name": "Chores Quest",
+  "short_name": "ChoresQuest",
+  "description": "A fun and interactive way for families to manage chores and rewards.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f4f8",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/imgs/favicon192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/imgs/favicon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

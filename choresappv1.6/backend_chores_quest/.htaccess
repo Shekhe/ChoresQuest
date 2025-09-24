@@ -1,0 +1,68 @@
+# Chores Quest - Sample .htaccess
+# Place this in the root directory of your PHP backend application
+# (e.g., in the folder that contains your 'api' subfolder)
+
+# Enable the rewrite engine
+RewriteEngine On
+
+# Set the base for rewrite rules if your backend is in a subdirectory
+# If your backend is at yourdomain.com/backend_chores_quest/
+# then RewriteBase should be /backend_chores_quest/
+# If your backend is at the root of a domain/subdomain, you can comment this out or use /
+# RewriteBase /backend_chores_quest/ #<-- ADJUST THIS if your backend is in a subfolder of your domain root
+
+# Prevent directory listing
+Options -Indexes
+
+# Standard security: Deny access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|config|sql|env)$">
+    Require all denied
+</FilesMatch>
+
+# --- API Routing Rules ---
+# These rules assume your PHP handler scripts (auth.php, tasks.php, etc.) are in an 'api/' subdirectory.
+# And you want URLs like /api/auth/login or /api/tasks/list
+
+# Example for auth.php:
+# Route /api/auth/some_action to /api/auth.php?action=some_action
+RewriteRule ^api/auth/([a-zA-Z0-9_-]+)$ api/auth.php?action=$1 [NC,L,QSA]
+RewriteRule ^api/auth/([a-zA-Z0-9_-]+)/?$ api/auth.php?action=$1 [NC,L,QSA] # Optional trailing slash
+
+# Example for tasks.php (you'll create tasks.php later):
+# Route /api/tasks/some_action to /api/tasks.php?action=some_action
+RewriteRule ^api/tasks/([a-zA-Z0-9_-]+)$ api/tasks.php?action=$1 [NC,L,QSA]
+RewriteRule ^api/tasks/([a-zA-Z0-9_-]+)/?$ api/tasks.php?action=$1 [NC,L,QSA]
+
+# Example for tasks.php with an ID:
+# Route /api/tasks/some_action/123 to /api/tasks.php?action=some_action&id=123
+RewriteRule ^api/tasks/([a-zA-Z0-9_-]+)/([0-9]+)$ api/tasks.php?action=$1&id=$2 [NC,L,QSA]
+RewriteRule ^api/tasks/([a-zA-Z0-9_-]+)/([0-9]+)/?$ api/tasks.php?action=$1&id=$2 [NC,L,QSA]
+
+# Add similar rules for children.php and rewards.php when you create them
+# Example for children.php:
+RewriteRule ^api/children/([a-zA-Z0-9_-]+)$ api/children.php?action=$1 [NC,L,QSA]
+RewriteRule ^api/children/([a-zA-Z0-9_-]+)/?$ api/children.php?action=$1 [NC,L,QSA]
+RewriteRule ^api/children/([a-zA-Z0-9_-]+)/([0-9]+)$ api/children.php?action=$1&id=$2 [NC,L,QSA]
+RewriteRule ^api/children/([a-zA-Z0-9_-]+)/([0-9]+)/?$ api/children.php?action=$1&id=$2 [NC,L,QSA]
+
+# Example for rewards.php:
+RewriteRule ^api/rewards/([a-zA-Z0-9_-]+)$ api/rewards.php?action=$1 [NC,L,QSA]
+RewriteRule ^api/rewards/([a-zA-Z0-9_-]+)/?$ api/rewards.php?action=$1 [NC,L,QSA]
+RewriteRule ^api/rewards/([a-zA-Z0-9_-]+)/([0-9]+)$ api/rewards.php?action=$1&id=$2 [NC,L,QSA]
+RewriteRule ^api/rewards/([a-zA-Z0-9_-]+)/([0-9]+)/?$ api/rewards.php?action=$1&id=$2 [NC,L,QSA]
+
+
+# If the request is not for an existing file or directory,
+# and it's an API call, you might want to route it to a central handler or show an error.
+# For now, the specific rules above handle known API patterns.
+# If a request doesn't match any rule, it will proceed normally (e.g., 404 if file not found).
+
+# To ensure that direct access to .php files in the api/ directory is still possible
+# (which is how these rules are set up to work), no further rules are strictly needed here.
+# If you wanted ALL requests to /api/* to go through a single index.php router in /api/,
+# the rules would be different.
+
+# Example: Forcing HTTPS (Uncomment if SSL is configured and you want to enforce it)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+

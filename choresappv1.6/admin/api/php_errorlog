@@ -1,0 +1,28 @@
+[22-Jun-2025 05:03:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php:20
+Stack trace:
+#0 /home/customer/www/choresquest.com/public_html/admin/api/users.php(23): require_once()
+#1 {main}
+  thrown in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:04:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php:20
+Stack trace:
+#0 /home/customer/www/choresquest.com/public_html/admin/api/users.php(23): require_once()
+#1 {main}
+  thrown in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:11:02 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:11:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php:20
+Stack trace:
+#0 /home/customer/www/choresquest.com/public_html/admin/api/users.php(29): require_once()
+#1 {main}
+  thrown in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:11:16 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:11:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php:20
+Stack trace:
+#0 /home/customer/www/choresquest.com/public_html/admin/api/users.php(29): require_once()
+#1 {main}
+  thrown in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:12:08 UTC] PHP Warning:  require_once(../db.php): Failed to open stream: No such file or directory in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20
+[22-Jun-2025 05:12:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db.php' (include_path='.:/usr/local/php82/pear') in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php:20
+Stack trace:
+#0 /home/customer/www/choresquest.com/public_html/admin/api/users.php(29): require_once()
+#1 {main}
+  thrown in /home/customer/www/choresquest.com/public_html/backend_chores_quest/api/auth.php on line 20

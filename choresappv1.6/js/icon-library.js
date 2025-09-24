@@ -1,0 +1,42 @@
+// This file contains the library of pre-defined icons for tasks.
+
+// Using a placeholder service to generate friendly icons.
+// You can replace these with your own hosted images if you prefer.
+export const ICON_LIBRARY = [
+    { name: 'Sweep', url: '../imgs/icons/broom.png' },
+    { name: 'Make Bed', url: '../imgs/icons/bed.png' },
+    { name: 'Read Book', url: '../imgs/icons/open-book.png' },
+    { name: 'Pet Care', url: '../imgs/icons/petcare.png' },
+    { name: 'Take out Trash', url: '../imgs/icons/garbage1.png' },
+    { name: 'Wash Dishes', url: '../imgs/icons/dish.png' },
+    { name: 'Laundry', url: '../imgs/icons/washing-machine.png' },
+    { name: 'Water Plants', url: '../imgs/icons/plants.png' },
+    { name: 'Tidy Room', url: '../imgs/icons/bedroom.png' },
+    { name: 'Homework', url: '../imgs/icons/homework.png' },
+    { name: 'Set Table', url: '../imgs/icons/dinner.png' },
+    { name: 'Brush Teeth', url: '../imgs/icons/dental-care.png' },
+    { name: 'Backpack', url: '../imgs/icons/backpack2.png' },
+    { name: 'Bathtub', url: '../imgs/icons/bathtub.png' },
+    { name: 'Clothes', url: '../imgs/icons/clothes.png' },
+    { name: 'Dishwasher', url: '../imgs/icons/dishwasher.png' },
+    { name: 'Dress', url: '../imgs/icons/dress.png' },
+    { name: 'Garbage', url: '../imgs/icons/garbage.png' },
+    { name: 'Lawn Mower', url: '../imgs/icons/lawn-mower.png' },
+    { name: 'Mop', url: '../imgs/icons/mop.png' },
+    { name: 'Nightgown', url: '../imgs/icons/nightgown.png' },
+    { name: 'Pajamas', url: '../imgs/icons/pajamas.png' },
+    { name: 'Sink', url: '../imgs/icons/sink.png' },
+    { name: 'Toilet', url: '../imgs/icons/toilet.png' },
+    { name: 'Vacuum', url: '../imgs/icons/vacuum-cleaner.png' },
+    { name: 'Cook', url: '../imgs/icons/cooking.png' },
+    { name: 'Whisk', url: '../imgs/icons/whisk.png' },
+    { name: 'Oven', url: '../imgs/icons/oven.png' },
+    { name: 'Stove', url: '../imgs/icons/stove.png' },
+    { name: 'Bread', url: '../imgs/icons/bread.png' },
+    { name: 'Mixes', url: '../imgs/icons/mixer.png' },
+    { name: 'shredder', url: '../imgs/icons/paper-shredder.png' },
+    { name: 'shredder', url: '../imgs/icons/toiletries.png' },
+    { name: 'shredder', url: '../imgs/icons/school.png' },
+    { name: 'shredder', url: '../imgs/icons/watering-can.png' },
+
+];

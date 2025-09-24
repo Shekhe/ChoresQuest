@@ -1,0 +1,21 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+
+# PHP / backend logs
+*.log
+*.error
+php_errorlog
+
+# Uploads (images, user data)
+choresappv1.6/backend_chores_quest/uploads/
+
+# Config (contains sensitive DB credentials)
+choresappv1.6/backend_chores_quest/config.php
+
+# Dependencies (if ever added)
+node_modules/
+vendor/
+
+# Database dumps
+*.sql

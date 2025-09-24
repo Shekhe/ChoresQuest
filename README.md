@@ -41,7 +41,7 @@ choresappv1.6/
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/Shekhe/chores-quest.git
+   git clone https://github.com/sheryklab/chores-quest.git
    ```
 2. Import `dbdump.sql` into MySQL.
 3. Update database credentials in `backend_chores_quest/config.php`.

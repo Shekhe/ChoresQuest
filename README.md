@@ -48,8 +48,7 @@ choresappv1.6/
 4. Run on a local server (e.g., XAMPP, MAMP) or deploy to a PHP server.
 
 ## Usage
-- Parents log in via `/admin`.
-- Kids access tasks via the main app.
+- Parent and kids access via the main app.
 - Rewards and progress update dynamically as tasks are completed.
 
 ## License
